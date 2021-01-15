@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        android:iconTint="@color/white"
+        android:title="search"
+        />
+
+    <item
+        android:id="@+id/menu_options"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:title="search"
+        />
+</menu>

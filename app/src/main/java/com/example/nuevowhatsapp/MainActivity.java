@@ -8,6 +8,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.nuevowhatsapp.Menu.CallsFragment;
 import com.example.nuevowhatsapp.Menu.ChatFragment;
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         setUpWithViewPager(binding.viewPager);
         binding.tabLayout.setupWithViewPager(binding.viewPager);
+        setSupportActionBar(binding.toolbarMain);
     }
 
     private void setUpWithViewPager(ViewPager viewPager){
@@ -67,4 +72,25 @@ public class MainActivity extends AppCompatActivity {
             return mFragmentTitleList.get(position);
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item)
+    {
+        int id = item.getItemId();
+
+        switch (id){
+            case R.id.menu_search : Toast.makeText(MainActivity.this, "Busqueda", Toast.LENGTH_SHORT).show();break;
+            case R.id.menu_options : Toast.makeText(MainActivity.this, "Opciones", Toast.LENGTH_SHORT).show();break;
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
 }

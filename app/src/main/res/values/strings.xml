@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NuevoWhatsapp</string>
+    <string name="chats">Chats</string>
+    <string name="estados">Estados</string>
+    <string name="llamadas">Llamadas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

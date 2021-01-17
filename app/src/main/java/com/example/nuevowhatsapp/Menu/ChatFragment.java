@@ -64,7 +64,7 @@ public class ChatFragment extends Fragment {
         }
     }
 
-    private List<Chatlist> list = new ArrayList<>();
+
     private RecyclerView recyclerView;
 
     @Override
@@ -76,18 +76,15 @@ public class ChatFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        List<Chatlist> list = new ArrayList<>();
+        list.add(new Chatlist("1","Miguel","Hola Rafa","12/01/2021","https://mobimg.b-cdn.net/pic/v2/gallery/preview/arren_riss_darren_criss-kino-lyudi-41370.jpg"));
+        list.add(new Chatlist("2","Bryan","Confirma","08/01/2021","https://www.ejezeta.cl/wp-content/uploads/2013/12/0004_CMan0018HD2O01P05S-1024x1024.jpg"));
+        list.add(new Chatlist("3","Madre","Hijo","01/01/2021","https://www.freejpg.com.ar/asset/400/9c/9cbc/F100012424.jpg"));
 
-        getChatlist();
-        
+        recyclerView.setAdapter(new ChatListAdapter(list,getContext()));
+
         return view;
     }
 
-    private void getChatlist() {
 
-        list.add(new Chatlist("1","Miguel","Hola Rafa","01/01/2021","https://mobimg.b-cdn.net/pic/v2/gallery/preview/arren_riss_darren_criss-kino-lyudi-41370.jpg"));
-        list.add(new Chatlist("2","Bryan","Confirma","08/01/2021","https://www.ejezeta.cl/wp-content/uploads/2013/12/0004_CMan0018HD2O01P05S-1024x1024.jpg"));
-        list.add(new Chatlist("3","Madre","Hijo","12/01/2021","https://www.freejpg.com.ar/asset/400/9c/9cbc/F100012424.jpg"));
-
-        recyclerView.setAdapter(new ChatListAdapter(list,getContext()));
-    }
 }

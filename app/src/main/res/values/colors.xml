@@ -10,4 +10,6 @@
     <color name="pro">#075e54</color>
     <color name="selected">#063A35</color>
     <color name="transparente">#00303030</color>
+    <color name="verde">#25D82D</color>
+    <color name="rojo">#D82525</color>
 </resources>

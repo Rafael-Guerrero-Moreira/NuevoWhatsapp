@@ -116,9 +116,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 switch (index){
-                    case 0: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_chat_24));break;
-                    case 1: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_photo_camera_24));break;
-                    case 2: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_add_ic_call_24));break;
+                    case 0: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_chat_24));
+                    binding.tabFloatButton.getDrawable().setTint(1);break;
+
+                    case 1: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_photo_camera_24));
+                        binding.tabFloatButton.getDrawable().setTint(1);break;
+                    case 2: binding.tabFloatButton.setImageDrawable(getDrawable(R.drawable.ic_baseline_add_ic_call_24));
+                        binding.tabFloatButton.getDrawable().setTint(1);break;
                 }
                 binding.tabFloatButton.show();
             }

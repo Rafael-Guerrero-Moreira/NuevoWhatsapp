@@ -3,12 +3,19 @@ package com.example.nuevowhatsapp.Menu;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.nuevowhatsapp.R;
+import com.example.nuevowhatsapp.adapter.StatusListAdapter;
+import com.example.nuevowhatsapp.model.StatusList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +64,23 @@ public class StatusFragment extends Fragment {
         }
     }
 
+    private RecyclerView recyclerView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_status, container, false);
+        View view = inflater.inflate(R.layout.fragment_status,container,false);
+
+        recyclerView = view.findViewById(R.id.recyclerViewStatus);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        List<StatusList> list = new ArrayList<>();
+        list.add(new StatusList("1","Miguel","Hoy 16:37","https://ruizhealytimes.com/wp-content/uploads/2017/11/silvestre-piolin-abuelita-1280x720.jpg"));
+        list.add(new StatusList("3","Madre","Hoy 09:21","https://i.pinimg.com/564x/98/f9/16/98f91666fa791d95e1391d221dccce10.jpg"));
+        list.add(new StatusList("2","Bryan","Hoy 16:37","https://i.pinimg.com/originals/70/12/41/7012415ba71307251e6f97b060f8c471.jpg"));
+
+        recyclerView.setAdapter(new StatusListAdapter(list,getContext()));
+
+        return view;
     }
 }

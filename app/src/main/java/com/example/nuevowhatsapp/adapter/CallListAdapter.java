@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.nuevowhatsapp.R;
 import com.example.nuevowhatsapp.model.CallList;
-import com.example.nuevowhatsapp.model.Chatlist;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;

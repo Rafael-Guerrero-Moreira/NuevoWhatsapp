@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="WhatsApp"
-            app:titleTextColor="@color/white"/>
+            app:titleTextColor="@color/white"
+            android:elevation="0dp"/>
     </com.google.android.material.appbar.AppBarLayout>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
